@@ -1,6 +1,8 @@
 package net.Barope.botwmod;
 
 import com.mojang.logging.LogUtils;
+import net.Barope.botwmod.Item.ModCreativeModTabs;
+import net.Barope.botwmod.Item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -41,6 +43,9 @@ public class BotwMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -53,6 +58,9 @@ public class BotwMod
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.KOROKSEED);
+        }
     }
 
     @SubscribeEvent
