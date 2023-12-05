@@ -2,12 +2,12 @@
   "item.botwmod.korokseed": "Korok seed",
   "item.botwmod.spiritorb": "Spirit orb",
 
-  "creativetab.weapons": "Weapons",
+  "creativetab.a_weapons": "Weapons",
   "creativetab.bows_and_arrows": "Bows and Arrows",
-  "creativetab.shields": "Shields",
-  "creativetab.armor": "Armor",
-  "creativetab.materials": "Materials",
+  "creativetab.c_shields": "Shields",
+  "creativetab.d_armor": "Armor",
+  "creativetab.e_materials": "Materials",
   "creativetab.food": "Food",
-  "creativetab.key_items": "Key Items"
+  "creativetab.g_key_items": "Key Items"
 
 }
